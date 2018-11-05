@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  QuoteCollectionVC.swift
 //  Quote-Generator-No-Storyboard
 //
 //  Created by Tim Ng on 11/6/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuoteCollectionVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

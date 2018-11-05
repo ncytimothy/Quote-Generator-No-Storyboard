@@ -13,9 +13,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 1. Grab the window to the device screen when app first starts up
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // 2. Set the window visible (Setting the window of device screen
+        // to be the initial window
+        window?.makeKeyAndVisible()
+        
+        // 2. Set the VCs
+        
+        // Since we don't have a custom constructor for the
+        // QuoteCollectionVC, we are just using
+        // the standard constructor from the stock CollectionViewVC
+        // Example:
+//        let colletionViewVC = UICollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        let quoteCollectionVC = QuoteCollectionVC(collectionViewLayout: UICollectionViewFlowLayout())
+        let navigationController = UINavigationController(rootViewController: quoteCollectionVC)
+        window?.rootViewController = navigationController
+        
         return true
     }
 
